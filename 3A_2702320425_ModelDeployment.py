@@ -12,6 +12,14 @@ def main():
     st.title("Loan Status Prediction App")
 
     st.markdown("""
+    <div style='text-align: center; margin-bottom: 20px;'>
+        <p style='font-size: 18px; color: #555; font-weight: bold;'>Nadja Nayara Krisna</p>
+        <p style='font-size: 16px; color: #555;'>NIM: 2702320425 | Group: LB09</p>
+        <p style='font-size: 16px; color: #555;'>Model Deployment Midterms (3A)</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
     <div style='background-color: #f0f2f6; padding: 20px; border-radius: 10px;'>
         <h3 style='color: #1f77b4;'>Welcome to the Loan Status Prediction App!</h3>
         <p style='font-size: 16px; color: #333;'>
