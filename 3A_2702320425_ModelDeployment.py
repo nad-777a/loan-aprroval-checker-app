@@ -4,7 +4,7 @@ import numpy as np
 import joblib
 
 # Load the machine learning model and encoders
-model = joblib.load("bestxgb_model.pkl")
+model = joblib.load("best_xgbmodel.pkl")
 gender_encoder = joblib.load("person_gender_encoder.pkl")
 default_encoder = joblib.load("previous_loan_defaults_on_file_encoder.pkl")
 
