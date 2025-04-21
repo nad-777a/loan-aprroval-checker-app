@@ -22,6 +22,7 @@ def main():
     loan_int_rate = st.number_input("Interest Rate (%)", min_value=0.0)
     cb_person_cred_hist_length = st.number_input("Credit History Length", min_value=1)
     credit_score = st.number_input("Credit Score", min_value=300, max_value=850)
+    loan_percent_income = st.number_input("Loan Percent Income", min_value=0.0)
 
     data = {
         'person_age': int(person_age),
@@ -35,7 +36,8 @@ def main():
         'loan_amnt': float(loan_amnt),
         'loan_int_rate': float(loan_int_rate),
         'cb_person_cred_hist_length': int(cb_person_cred_hist_length),
-        'credit_score': int(credit_score)
+        'credit_score': int(credit_score),
+        'loan_percent_income': float(loan_percent_income)
     }
 
     df = pd.DataFrame([list(data.values())], columns=list(data.keys()))
