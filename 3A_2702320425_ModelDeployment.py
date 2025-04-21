@@ -14,7 +14,7 @@ def main():
     st.markdown("""
     <div style='text-align: center; margin-bottom: 20px;'>
         <p style='font-size: 18px; color: #555; font-weight: bold;'>Nadja Nayara Krisna</p>
-        <p style='font-size: 16px; color: #555;'>NIM: 2702320425 | Group: LB09</p>
+        <p style='font-size: 16px; color: #555;'>NIM: 2702320425 | Class: LB09</p>
         <p style='font-size: 16px; color: #555;'>Model Deployment Midterms (3A)</p>
     </div>
     """, unsafe_allow_html=True)
