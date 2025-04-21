@@ -12,8 +12,8 @@ def main():
 
     person_age = st.number_input("Enter Age", min_value=18, max_value=100)
     person_gender = st.radio("Select Gender", options=["male", "female"])
-    person_income = st.number_input("Enter Monthly Income", min_value=1000)
-    person_education = st.selectbox("Select Education", options=['High School', 'Associate', 'Bachelor', 'Master', 'Doctorate'])
+    person_income = st.number_input("Enter Yearly Income", min_value=1000)
+    person_education = st.selectbox("Select Latest Education", options=['High School', 'Associate', 'Bachelor', 'Master', 'Doctorate'])
     previous_loan_defaults_on_file = st.radio("Previous Loan Defaults", options=["No", "Yes"])
     person_emp_exp = st.number_input("Employment Experience (in years)", min_value=0)
     person_home_ownership = st.selectbox("Home Ownership", options=["Own", "Rent", "Mortgage"])
