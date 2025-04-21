@@ -8,8 +8,26 @@ gender_encoder = joblib.load("person_gender_encoder.pkl")
 default_encoder = joblib.load("previous_loan_defaults_on_file_encoder.pkl")
 
 def main():
+    st.set_page_config(page_title="Loan Status Prediction App", page_icon="💸", layout="centered")
     st.title("Loan Status Prediction App")
 
+    st.markdown("""
+    <div style='background-color: #f0f2f6; padding: 20px; border-radius: 10px;'>
+        <h3 style='color: #1f77b4;'>Welcome to the Loan Status Prediction App!</h3>
+        <p style='font-size: 16px; color: #333;'>
+            This app uses a machine learning model to predict whether your loan application is likely to be <strong>approved</strong> or <strong>rejected</strong>. 
+            Simply input your financial details, such as income, credit score, and loan amount, and let our model analyze the data to provide an instant prediction.
+        </p>
+        <p style='font-size: 16px; color: #333;'>
+            <strong>Why use this app?</strong> It’s fast, user-friendly, and helps you understand your loan eligibility before applying formally. 
+            Start by entering your details below!
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.info("💡 **Tip**: Ensure all inputs are accurate for the most reliable prediction.")
+
+    st.subheader("Enter Your Details")
     person_age = st.number_input("Enter Age", min_value=18, max_value=100)
     person_gender = st.radio("Select Gender", options=["male", "female"])
     person_income = st.number_input("Enter Yearly Income", min_value=1000)
