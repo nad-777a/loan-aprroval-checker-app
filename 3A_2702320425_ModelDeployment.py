@@ -59,7 +59,12 @@ def main():
     if st.button('Make Prediction'):
         result = make_prediction(df)
         prediction_text = "Approved" if result == 1 else "Rejected"
-        st.success(f"The loan application is likely to be: {prediction_text}")
+        outline_color = "green" if result == 1 else "red"
+        st.markdown(
+            f'<div style="border: 2px solid {outline_color}; padding: 10px; border-radius: 5px; display: inline-block;">'
+            f'The loan application is likely to be: {prediction_text}</div>',
+            unsafe_allow_html=True
+        )
 
 change color to red if rejected and green if approved
 def make_prediction(features):
