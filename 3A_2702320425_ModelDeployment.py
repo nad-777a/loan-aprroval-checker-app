@@ -58,8 +58,13 @@ def main():
 
     if st.button('Make Prediction'):
         result = make_prediction(df)
-        prediction_text = "Approved" if result == 1 else "Rejected"
-        st.success(f"The loan application is likely to be: {prediction_text}")
+        prediction_text = "APPROVED" if result == 1 else "REJECTED"
+        bg_color = "green" if result == 1 else "red"
+        st.markdown(
+            f'<div style="background-color:{bg_color}; color:white; padding:10px; border-radius:5px; text-align:center; width:fit-content;">'
+            f'The loan application is likely to be: {prediction_text}</div>',
+            unsafe_allow_html=True
+        )
 
 def make_prediction(features):
     input_array = np.array(features).reshape(1, -1)
